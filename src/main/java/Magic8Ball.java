@@ -1,43 +1,41 @@
 import java.util.Random;
 import java.util.Scanner;
 
-/*
- * Create a Magic 8-ball program that gives custom responses to yes or no questions
- */
 public class Magic8Ball {
 
-    // 1. Make a main method that includes all the steps below
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random userQuestion = new Random();
+        String[] answers = {"Without a doubt", "Yes, Definitely", "Most likely", "Outlook Good", "Outlook Uncertain",
+                "All signs point to yes", "Ask Again Later", "Don't Count on it", "Outlook not Good", "Very Doubtful","I'm Unsure"};
+
+        System.out.println("Welcome to the Magic Eight Ball!");
+        System.out.println("Please ask a yes or no question and I'll give you an answer");
+        System.out.println("Type Quit to exit");
+
+        while (true) {
+            System.out.print("Ask A question: ");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("quit")) {
+                System.out.println("Goodbye!");
+                break;
+            }
+            System.out.println(answers[userQuestion.nextInt(answers.length)]);
+
+        }
+
+        scanner.close();
+    }
 
 
-    // 2. Get the user to enter a question for the magic 8-ball to answer
-    //    Scanner scanner = new Scanner(System.in);
-    //    String userQuestion = scanner.nextLine();
 
 
-    // 3. Make a variable and initialize it to a random number.
-    //
-    //    // Get random a number from: [0, 1, 2, 3]
-    //    int randNumber = new Random().nextInt(4);
+    }
 
 
-    // 4. If the random number is 0
-
-        // Tell the user "Yes"
 
 
-    // 5. If the random number is 1
 
-        // Tell the user "No"
-
-
-    // 6. If the random number is 2
-
-        // Tell the user a custom response
-
-
-    // 7. If the random number is 3
-
-        // Tell the user a custom response
-}
 
 
